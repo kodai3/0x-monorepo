@@ -19,6 +19,7 @@ let providerConfigs: Web3Config = {
     total_accounts: constants.NUM_TEST_ACCOUNTS,
     shouldUseInProcessGanache: true,
     shouldAllowUnlimitedContractSize: true,
+    hardfork: 'istanbul',
 };
 
 if (process.env.FORK_RPC_URL !== undefined) {

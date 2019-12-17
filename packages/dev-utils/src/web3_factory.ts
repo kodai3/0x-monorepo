@@ -24,6 +24,7 @@ export interface Web3Config {
     fork?: string;
     blockTime?: number;
     unlocked_accounts?: string[];
+    hardfork?: string;
 }
 
 export const web3Factory = {
@@ -79,6 +80,7 @@ export const web3Factory = {
                     fork: config.fork,
                     blockTime: config.blockTime,
                     unlocked_accounts: config.unlocked_accounts,
+                    hardfork: config.hardfork,
                 } as any), // TODO remove any once types are merged in DefinitelyTyped
             );
         } else {
