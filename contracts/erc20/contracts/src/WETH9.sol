@@ -62,7 +62,7 @@ contract WETH9 {
         public
         returns (bool)
     {
-        require(balanceOf[src] >= wad), "WETH9/INSUFFICIENT_BALANCE";
+        require(balanceOf[src] >= wad, "WETH9/INSUFFICIENT_BALANCE");
 
         if (src != msg.sender && allowance[src][msg.sender] != uint(-1)) {
             require(allowance[src][msg.sender] >= wad, "WETH9/INSUFFICIENT_ALLOWANCE");
